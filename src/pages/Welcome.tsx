@@ -92,7 +92,7 @@ export default function Welcome() {
 
         {step === 'intro' && (
           <section>
-            <h1 className="font-display text-[44px] leading-[0.95] text-ink md:text-6xl">
+            <h1 className="font-display text-[clamp(32px,11vw,44px)] leading-[0.95] text-ink md:text-6xl">
               {reducedMotion() ? t('welcome.title') : <BlurText key={lang} text={t('welcome.title')} animateBy="words" delay={90} direction="bottom" trigger="load" />}
             </h1>
             <p className="mt-5 max-w-[34ch] text-lg leading-relaxed text-ink/85">{t('welcome.body')}</p>
