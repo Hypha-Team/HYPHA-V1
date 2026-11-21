@@ -10,6 +10,9 @@ import { Icon } from '../components/ui'
 import { DUR, EASE, gsap, reducedMotion, scrollToEl } from '../motion/motion'
 import { useApp, type App } from '../state/AppContext'
 
+/** The logo works both at the site root and under /hypha/ on GitHub Pages. */
+const LOGO = `${import.meta.env.BASE_URL}logo.jpg`
+
 type Go = (path: string) => void
 
 interface Step {
@@ -285,7 +288,7 @@ function DemoEnd({ onClose }: { onClose: () => void }) {
   return (
     <div className="fixed inset-0 z-[70] flex flex-col items-center justify-center bg-linen px-6 text-center" role="dialog" aria-modal="true">
       <div ref={ref} className="flex max-w-md flex-col items-center gap-6">
-        <img src="/logo.jpg" alt="HYPHA logo" className="w-48 rounded-[var(--radius-work)] md:w-60" />
+        <img src={LOGO} alt="HYPHA logo" className="w-48 rounded-[var(--radius-work)] md:w-60" />
         <p className="font-display text-4xl text-ink md:text-5xl">
           {lang === 'pt' ? 'De estudante a rede, antes de acabar o curso.' : 'From student to network, before graduation.'}
         </p>

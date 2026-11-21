@@ -10,6 +10,9 @@
 import { useEffect, useRef, useState } from 'react'
 import { reducedMotion } from '../motion/motion'
 
+/** The logo works both at the site root and under /hypha/ on GitHub Pages. */
+const LOGO = `${import.meta.env.BASE_URL}logo.jpg`
+
 const FEEL = {
   radius: 0.2, // size of the area that reacts (share of the panel height)
   lens: 0.32, // how much the threads bulge away from the pointer
@@ -106,7 +109,7 @@ export default function LiveLogo({ alt, className = '' }: { alt: string; classNa
       resize()
     }
     image.onerror = () => { console.warn('LiveLogo: image failed'); setFallback(true) }
-    image.src = '/logo.jpg'
+    image.src = LOGO
 
     // pointer state, smoothed
     const target = { x: 0.5, y: 0.5 }
@@ -177,6 +180,6 @@ export default function LiveLogo({ alt, className = '' }: { alt: string; classNa
     }
   }, [fallback])
 
-  if (fallback) return <img src="/logo.jpg" alt={alt} className={`h-full w-full object-cover ${className}`} />
+  if (fallback) return <img src={LOGO} alt={alt} className={`h-full w-full object-cover ${className}`} />
   return <canvas ref={canvas} role="img" aria-label={alt} className={`block h-full w-full touch-pan-y ${className}`} />
 }

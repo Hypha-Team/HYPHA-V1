@@ -38,6 +38,18 @@ Open the address it prints (http://localhost:5173). To open it on a phone on the
 **Real photos instead of generated art:** put images in `public/works/` and in `src/data/works.ts` replace
 `picture: art('stone', 101, 0.78)` with `picture: { src: '/works/marta-1.jpg', ratio: 0.78 }` (ratio = width / height).
 
+## Live site
+
+https://alessandromacelloni2003-design.github.io/hypha/ (GitHub Pages, branch `gh-pages`).
+
+To publish an update there:
+
+```bash
+BASE=/hypha/ npm run build && cp dist/index.html dist/404.html && touch dist/.nojekyll
+```
+
+then push the contents of `dist` to the `gh-pages` branch.
+
 ## Deploy for free
 
 **Vercel:** push this folder to a GitHub repository, then on vercel.com choose *Add New → Project*, import the repository and press *Deploy* (Vite is detected automatically). `vercel.json` already handles page links.
