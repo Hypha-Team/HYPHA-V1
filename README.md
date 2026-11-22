@@ -40,7 +40,7 @@ Open the address it prints (http://localhost:5173). To open it on a phone on the
 
 ## Live site
 
-https://alessandromacelloni2003-design.github.io/hypha/ (GitHub Pages, branch `gh-pages`).
+https://hypha-team.github.io/hypha/ (GitHub Pages, branch `gh-pages`).
 
 To publish an update there:
 
