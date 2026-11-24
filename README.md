@@ -40,12 +40,12 @@ Open the address it prints (http://localhost:5173). To open it on a phone on the
 
 ## Live site
 
-https://hypha-team.github.io/hypha/ (GitHub Pages, branch `gh-pages`).
+https://hypha-team.github.io/HYPHA-V1/ (GitHub Pages, branch `gh-pages`).
 
 To publish an update there:
 
 ```bash
-BASE=/hypha/ npm run build && cp dist/index.html dist/404.html && touch dist/.nojekyll
+BASE=/HYPHA-V1/ npm run build && cp dist/index.html dist/404.html && touch dist/.nojekyll
 ```
 
 then push the contents of `dist` to the `gh-pages` branch.

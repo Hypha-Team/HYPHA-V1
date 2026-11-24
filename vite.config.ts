@@ -4,7 +4,7 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  // GitHub Pages serves the site under /hypha/; everywhere else it lives at the root.
+  // GitHub Pages serves the site under /HYPHA-V1/; everywhere else it lives at the root.
   base: process.env.BASE ?? '/',
   plugins: [react(), tailwindcss()],
   server: { host: true },
