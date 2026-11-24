@@ -15,7 +15,7 @@ export function ConnectButton({ personId }: { personId: string }) {
   const c = connectionWith(userId, personId)
   const state = !c ? 'none' : c.status === 'accepted' ? 'connected' : 'pending'
   return (
-    <ClickSpark sparkColor="#D7261E" sparkCount={10} sparkRadius={26} sparkSize={10} duration={450} className="rounded-full" style={{ width: 'auto', height: 'auto', display: 'inline-block' }}>
+    <ClickSpark sparkColor="#C90202" sparkCount={10} sparkRadius={26} sparkSize={10} duration={450} className="rounded-full" style={{ width: 'auto', height: 'auto', display: 'inline-block' }}>
       <Button
         variant={state === 'none' ? 'primary' : 'secondary'}
         data-demo="connect"

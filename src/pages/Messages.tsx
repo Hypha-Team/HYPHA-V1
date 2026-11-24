@@ -33,7 +33,7 @@ function Inbox({ activeId }: { activeId?: string }) {
                 <li key={r.from} className="rounded-[var(--radius-ui)] bg-paper p-3">
                   <PersonLine person={p} sub={t('msg.wantsToConnect')} />
                   <div className="mt-3 flex gap-2">
-                    <ClickSpark sparkColor="#D7261E" sparkCount={10} sparkRadius={24} className="flex-1 rounded-full">
+                    <ClickSpark sparkColor="#C90202" sparkCount={10} sparkRadius={24} className="flex-1 rounded-full">
                       <Button variant="primary" className="w-full" data-demo={`accept-${r.from}`} onClick={() => { accept(r.from); toast(t('msg.accepted')) }}>{t('msg.accept')}</Button>
                     </ClickSpark>
                     <Button onClick={() => decline(r.from)}>{t('msg.decline')}</Button>
@@ -128,7 +128,7 @@ function Chat({ id }: { id: string }) {
           aria-label={t('msg.placeholder')}
           className="min-h-12 flex-1 resize-none rounded-[22px] border border-linen-deep bg-paper px-4 py-3 text-base leading-snug"
         />
-        <ClickSpark sparkColor="#D7261E" sparkCount={9} sparkRadius={22} className="rounded-full" style={{ width: 'auto', height: 'auto' }}>
+        <ClickSpark sparkColor="#C90202" sparkCount={9} sparkRadius={22} className="rounded-full" style={{ width: 'auto', height: 'auto' }}>
           <button type="submit" data-demo="send" disabled={!text.trim()} className="grid h-12 w-12 place-items-center rounded-full bg-red text-paper disabled:opacity-40" aria-label={t('msg.send')}>
             <Icon icon={SentIcon} size={20} />
           </button>

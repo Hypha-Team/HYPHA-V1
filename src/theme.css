@@ -5,14 +5,14 @@
 @import "tailwindcss";
 
 @theme {
-  /* Palette taken from the embroidered logo */
-  --color-red: #D7261E;        /* signal red: wordmark, the one main action, badges */
-  --color-red-deep: #B01C15;   /* red on hover / pressed */
-  --color-linen: #F1EBE3;      /* page background, like the logo's linen */
-  --color-linen-deep: #E4DACD; /* surfaces, chips, dividers */
-  --color-paper: #FBF8F4;      /* the wall behind artworks */
-  --color-ink: #1F1B18;        /* text */
-  --color-thread: #857B71;     /* secondary text */
+  /* Palette taken from the logo */
+  --color-red: #C90202;        /* the logo's red: wordmark, the one main action, badges */
+  --color-red-deep: #A30000;   /* red on hover / pressed */
+  --color-linen: #FCDEC6;      /* page background: the logo's peach cream */
+  --color-linen-deep: #F3CBAE; /* surfaces, chips, dividers */
+  --color-paper: #FFF2E8;      /* cards and the wall behind artworks */
+  --color-ink: #2A1512;        /* text, a warm near-black */
+  --color-thread: #7A5546;     /* secondary text (readable on all the creams) */
 
   /* Typography */
   --font-display: "Bagel Fat One", "Arial Rounded MT Bold", system-ui, sans-serif;
@@ -82,7 +82,7 @@ html.lenis, html.lenis body { height: auto; }
   .demo-spot { animation: demo-pulse 1.4s ease-in-out infinite; }
 }
 @keyframes demo-pulse {
-  50% { box-shadow: 0 0 0 3px var(--color-linen), 0 0 0 10px rgb(215 38 30 / 0.35); }
+  50% { box-shadow: 0 0 0 3px var(--color-linen), 0 0 0 10px rgb(201 2 2 / 0.35); }
 }
 
 .safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
